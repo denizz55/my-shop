@@ -10,23 +10,28 @@ const fetchProducts = async () => {
 const HomePage = () => {
   const { data, error, isLoading } = useQuery('products', fetchProducts);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div>Загрузка</div>;
   if (error) return <div>Error loading products</div>;
 
   return (
     <div>
-      <h1>Товары</h1>
-      <ul>
+    <h1>Товары</h1>
+      <div className='container'>
+      <ul className="product-list">
         {data.map((product: any) => (
-          <li key={product.id}>
+          <li key={product.id} className="product-card">
             <Link href={`/product/${product.id}`}>
-              {product.title}
+                <img src={product.image} alt={product.title} className="product-image" />
+                <h2 className="product-title">{product.title}</h2>
+                <p className="product-price">{product.price} $ </p>
+                <button className="product-button">Купить</button>
             </Link>
           </li>
         ))}
       </ul>
     </div>
-  );
+  </div>
+);
 };
 
 export default HomePage;

@@ -40,12 +40,12 @@ const ProductPage = () => {
 
   return (
     <div>
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
-      <p>${data.price}</p>
-      <img src={data.image} alt={data.title} />
-      <button onClick={handleAddToCart}>Add to Cart</button>
-      <button onClick={handleDelete}>Delete</button>
+      <h1 className='title'>{data.title}</h1>
+      <p className='description'>{data.description}</p>
+      <p className='price'>${data.price}</p>
+      <img className='img_product'src={data.image} alt={data.title} />
+      <button className='butt_addcart' onClick={handleAddToCart}>Add to Cart</button>
+      <button className='butt_delete' onClick={handleDelete}>Delete</button>
     </div>
   );
 };

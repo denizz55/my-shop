@@ -5,7 +5,7 @@ const CartPage = () => {
 
   return (
     <div>
-      <h1>Your Cart</h1>
+      <h1>Ваша корзина</h1>
       <ul>
         {cart.map((item) => (
           <li key={item.id}>
@@ -14,7 +14,7 @@ const CartPage = () => {
           </li>
         ))}
       </ul>
-      {cart.length === 0 && <p>Your cart is empty.</p>}
+      {cart.length === 0 && <p>Ваша корзина пуста</p>}
     </div>
   );
 };
