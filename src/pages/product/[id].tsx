@@ -39,13 +39,15 @@ const ProductPage = () => {
   };
 
   return (
-    <div>
+    <div className='block_id_tovar'>
       <h1 className='title'>{data.title}</h1>
       <p className='description'>{data.description}</p>
-      <p className='price'>${data.price}</p>
       <img className='img_product'src={data.image} alt={data.title} />
-      <button className='butt_addcart' onClick={handleAddToCart}>Add to Cart</button>
-      <button className='butt_delete' onClick={handleDelete}>Delete</button>
+      <p className='price'>price:{data.price}$</p>
+      <div className='buttons'>
+      <button className='butt_addcart' onClick={handleAddToCart}>Добавить в корзину</button>
+      <button className='butt_delete' onClick={handleDelete}>Удалить</button>
+      </div>
     </div>
   );
 };

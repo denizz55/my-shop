@@ -131,6 +131,67 @@ body {
     height: 200px;
   }
 
-  .img_product{
-    width: 400px;
-  }
+  .block_id_tovar {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 24px;
+    color: #f00;
+    margin-bottom: 20px;
+}
+
+.img_product {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.butt_addcart, .butt_delete {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s;
+}
+
+.butt_addcart:hover, .butt_delete:hover {
+    background-color: #0056b3;
+}
+
+.butt_delete {
+    background-color: #dc3545;
+}
+
+.butt_delete:hover {
+    background-color: #c82333;
+}
+
+.buttons{
+  display: flex;
+  justify-content: flex-start;
+}
