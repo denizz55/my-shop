@@ -40,12 +40,13 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
+    <div className="form-wrapper">
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
         <div>
-          <label>Username</label>
+          <label>Имя пользователя</label>
           <input
+            className='form-item'
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -53,18 +54,21 @@ const Login = () => {
           />
         </div>
         <div>
-          <label>Password</label>
+          <label>Пароль</label>
           <input
+            className='form-item'
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
-        <button type="submit">Login</button>
+        <div className='button-panel'>
+        <button className='button' type="submit">Login</button>
+        </div>
       </form>
     </div>
   );
 };
-
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsI…E0NH0.xS9oQieoQMrstEv0hJDsr3ypZFhGjstFaRwH2KQ3KHM  
 export default Login;

@@ -39,16 +39,18 @@ const ProductPage = () => {
   };
 
   return (
-    <div className='block_id_tovar'>
-      <h1 className='title'>{data.title}</h1>
-      <p className='description'>{data.description}</p>
-      <img className='img_product'src={data.image} alt={data.title} />
-      <p className='price'>price:{data.price}$</p>
-      <div className='buttons'>
-      <button className='butt_addcart' onClick={handleAddToCart}>Добавить в корзину</button>
-      <button className='butt_delete' onClick={handleDelete}>Удалить</button>
-      </div>
+    <div className="block_id_tovar">
+    <img className='img_product'src={data.image} alt={data.title} />
+    <div className="content">
+        <h1 className="title">Product Title</h1>
+        <p className="description">This is a brief description of the product. It provides essential details that the customer might want to know.</p>
+        <p className="price">Price: $100</p>
+        <div className="buttons">
+        <button className='butt_addcart' onClick={handleAddToCart}>Добавить в корзину</button>
+        <button className='butt_delete' onClick={handleDelete}>Удалить</button>
+        </div>
     </div>
+</div>
   );
 };
 

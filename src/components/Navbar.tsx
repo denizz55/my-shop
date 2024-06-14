@@ -9,10 +9,10 @@ const Navbar = () => {
   return (
     <nav>
       <Link className='name' href="/"> Fakestore </Link>
-      <Link href="/"> Главная </Link>
-      <Link href="/create-product">Добавить продукт</Link>
-      <Link href="/cart">Корзина({cart.length})</Link>
-      <Link href="/login">Авторизация</Link>
+      <Link className='nav_list' href="/"> Главная </Link>
+      <Link className='nav_list' href="/create-product">Добавить продукт</Link>
+      <Link className='nav_list' href="/cart">Корзина({cart.length})</Link>
+      <Link className='nav_list' href="/login">Авторизация</Link>
     </nav>
   );
 };

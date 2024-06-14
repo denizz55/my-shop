@@ -26,37 +26,41 @@ const CreateProductPage = () => {
 
   return (
     <div>
-      <h1>Create Product</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Название"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          required
-        />
-        <textarea
-          placeholder="Описание"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          required
-        />
-        <input
-          type="number"
-          placeholder="Цена"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Адрес картинки"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-          required
-        />
-        <button type="submit">Create</button>
-      </form>
+      <div className='form-wrapper'>
+        <h2>Добавить продукт</h2>
+        <form onSubmit={handleSubmit}>
+          <input className='form-item'
+            type="text"
+            placeholder="Название"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+          <textarea className='form-item'
+            placeholder="Описание"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          />
+          <input className='form-item'
+            type="number"
+            placeholder="Цена"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            required
+          />
+          <input className='form-item'
+            type="text"
+            placeholder="Адрес картинки"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+            required
+          />
+          <div className='button-panel'> 
+          <button className='button' type="submit">Create</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
